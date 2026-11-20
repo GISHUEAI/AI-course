@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bình dân học vụ số – Tập huấn ứng dụng AI | PGS.TS. Nguyễn Quang Tuấn</title>
+<meta name="description" content="Tập huấn Bình dân học vụ số: cá nhân hóa trợ lý AI cho công việc. Tài liệu, mẫu câu lệnh và cẩm nang tải về. Viện Chuyển đổi số và Học liệu, Đại học Huế.">
+<meta property="og:title" content="Bình dân học vụ số – Biến AI thành trợ lý cá nhân của chính bạn">
+<meta property="og:description" content="Tài liệu chuẩn bị, 6 bước cá nhân hóa ChatGPT, mẫu câu lệnh và cẩm nang tải về.">
+<meta property="og:image" content="assets/hero.jpg">
+<link rel="icon" href="assets/avatar.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#ffffff;color:#10142a;font-family:'Be Vietnam Pro',system-ui,sans-serif}
+a{color:#d7101f}a:hover{color:#8f0a14}
+*{box-sizing:border-box}
+img{max-width:100%;display:block}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #ffc53d;outline-offset:2px}
+.hero{background-color:#060d26;background-image:radial-gradient(circle at 12% 18%,rgba(215,16,31,.42),transparent 38%),radial-gradient(circle at 88% 78%,rgba(56,110,255,.40),transparent 42%),linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:auto,auto,44px 44px,44px 44px}
+.glass{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.float{animation:fl 6s ease-in-out infinite}
+.float2{animation:fl 7s ease-in-out -2s infinite}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.lift{transition:transform .2s ease,box-shadow .2s ease}
+.lift:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(16,20,42,.14)}
+.hl{background:linear-gradient(transparent 62%,rgba(255,197,61,.85) 62%);padding:0 4px}
+.dark{background-color:#060d26;background-image:radial-gradient(circle at 85% 10%,rgba(215,16,31,.30),transparent 40%)}
+@media (prefers-reduced-motion:reduce){.float,.float2{animation:none}.lift{transition:none}}
+</style>
+
+<style>html{scroll-behavior:smooth;scroll-padding-top:16px}</style>
+</head>
+<body>
+
+<div style="width: 100%; font-family: 'Be Vietnam Pro', system-ui, sans-serif; overflow-x: clip">
+
+<!-- BANNER -->
+<header style="background: #ffffff; padding: 16px max(5vw, 16px); border-bottom: 1px solid #eceff6">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px">
+<img src="assets/logo.jpg" alt="Đại học Huế – Viện Chuyển đổi số và Học liệu" style="width: min(560px, 100%); height: auto">
+<nav aria-label="Mục lục" style="display: flex; flex-wrap: wrap; gap: 4px; font-size: 15px; font-weight: 600">
+<a href="#cong-cu" style="color: #10142a; text-decoration: none; padding: 10px 12px; border-radius: 10px">Công cụ AI</a>
+<a href="#chuan-bi" style="color: #10142a; text-decoration: none; padding: 10px 12px; border-radius: 10px">Chuẩn bị</a>
+<a href="#ca-nhan-hoa" style="color: #10142a; text-decoration: none; padding: 10px 12px; border-radius: 10px">Cá nhân hóa</a>
+<a href="#nang-cap" style="color: #10142a; text-decoration: none; padding: 10px 12px; border-radius: 10px">Nâng cấp gói</a>
+<a href="#tai-lieu" style="color: #10142a; text-decoration: none; padding: 10px 12px; border-radius: 10px">Tải tài liệu</a>
+<a href="#tac-gia" style="color: #ffffff; background: #d7101f; text-decoration: none; padding: 10px 16px; border-radius: 10px">Liên hệ</a>
+</nav>
+</div>
+</header>
+<div style="height: 6px; background: linear-gradient(90deg, #d7101f 0%, #d7101f 55%, #ffc53d 55%, #ffc53d 75%, #386eff 75%)"></div>
+
+<!-- HERO -->
+<section class="hero" style="color: #ffffff; padding: clamp(40px, 6vw, 88px) max(5vw, 16px)">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 1 1 460px; display: flex; flex-direction: column; gap: 22px">
+<div class="glass" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px 8px 8px; border-radius: 999px; font-size: 14px; font-weight: 600">
+<span style="background: #d7101f; border-radius: 999px; padding: 5px 12px; font-weight: 800">Mới</span>
+Bình dân học vụ số · Năng lực số và AI
+</div>
+<h1 style="margin: 0; font-size: clamp(36px, 5vw, 60px); line-height: 1.05; font-weight: 900; text-wrap: balance">Biến AI thành <span class="hl" style="color: #ffffff">trợ lý cá nhân</span> của chính bạn</h1>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #c9d2ec; max-width: 560px">Tập huấn thực hành ứng dụng trí tuệ nhân tạo vào công việc hằng ngày. Mỗi học viên rời lớp với một tài khoản AI đã được cá nhân hóa: hiểu đúng vai trò, nhiệm vụ và phong cách làm việc của mình.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="tel:0949381391" target="_top" style="display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 26px; background: #d7101f; color: #ffffff; border-radius: 14px; font-weight: 800; font-size: 17px; text-decoration: none; box-shadow: 0 10px 30px rgba(215,16,31,.45)">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+Gọi 0949 381 391</a>
+<a href="#tai-lieu" style="display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 22px; background: #ffc53d; color: #10142a; border-radius: 14px; font-weight: 800; font-size: 17px; text-decoration: none">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4 M7 10l5 5 5-5 M12 15V3"/></svg>
+Tải cẩm nang</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; padding-top: 4px">
+
+<span class="glass" style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 6px; border-radius: 12px; font-size: 14px; font-weight: 600">
+<span style="width: 30px; height: 30px; border-radius: 9px; background: #ffffff; display: flex; align-items: center; justify-content: center">
+<img src="assets/openai.svg" alt="" style="width: 20px; height: 20px">
+</span>ChatGPT</span>
+
+<span class="glass" style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 6px; border-radius: 12px; font-size: 14px; font-weight: 600">
+<span style="width: 30px; height: 30px; border-radius: 9px; background: #ffffff; display: flex; align-items: center; justify-content: center">
+<img src="assets/gemini.svg" alt="" style="width: 20px; height: 20px">
+</span>Gemini</span>
+
+<span class="glass" style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 6px; border-radius: 12px; font-size: 14px; font-weight: 600">
+<span style="width: 30px; height: 30px; border-radius: 9px; background: #ffffff; display: flex; align-items: center; justify-content: center">
+<img src="assets/claude.svg" alt="" style="width: 20px; height: 20px">
+</span>Claude</span>
+
+<span class="glass" style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 6px; border-radius: 12px; font-size: 14px; font-weight: 600">
+<span style="width: 30px; height: 30px; border-radius: 9px; background: #ffffff; display: flex; align-items: center; justify-content: center">
+<img src="assets/copilot.svg" alt="" style="width: 20px; height: 20px">
+</span>Microsoft Copilot</span>
+
+<span class="glass" style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 6px; border-radius: 12px; font-size: 14px; font-weight: 600">
+<span style="width: 30px; height: 30px; border-radius: 9px; background: #ffffff; display: flex; align-items: center; justify-content: center">
+<img src="assets/notebooklm.png" alt="" style="width: 20px; height: 20px">
+</span>Gemini Notebook (NotebookLM)</span>
+
+</div>
+</div>
+
+<div style="flex: 1 1 460px; position: relative; padding: 18px 0 30px">
+<div style="position: relative; border-radius: 26px; padding: 8px; background: linear-gradient(135deg, #d7101f, #ffc53d 45%, #386eff)">
+<img src="assets/hero.jpg" alt="PGS.TS. Nguyễn Quang Tuấn trình bày về cá nhân hóa trợ lý AI" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 20px">
+</div>
+<div class="float" style="position: absolute; left: -10px; bottom: 0; background: #ffffff; color: #10142a; padding: 12px 16px 12px 12px; border-radius: 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 16px 40px rgba(0,0,0,.35)">
+<img src="assets/avatar.jpg" alt="" style="width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 3px solid #d7101f">
+<div style="display: flex; flex-direction: column; gap: 1px">
+<strong style="font-size: 16px">PGS.TS. Nguyễn Quang Tuấn</strong>
+<span style="font-size: 13px; color: #4a5168">Báo cáo viên · Viện CĐS và Học liệu</span>
+</div>
+</div>
+<div class="float2" style="position: absolute; right: -6px; top: 0; background: #ffc53d; color: #10142a; padding: 10px 16px; border-radius: 14px; font-weight: 800; font-size: 15px; box-shadow: 0 12px 30px rgba(0,0,0,.3)">6 bước · 1 trợ lý AI</div>
+</div>
+</div>
+
+<div style="max-width: 1200px; margin: 44px auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px">
+
+<div class="glass" style="border-radius: 18px; padding: 18px 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 36px; font-weight: 900; line-height: 1; color: #ffc53d">4</span>
+<span style="font-size: 15px; color: #dbe2f6">việc chuẩn bị trước buổi học</span>
+</div>
+
+<div class="glass" style="border-radius: 18px; padding: 18px 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 36px; font-weight: 900; line-height: 1; color: #ffc53d">6</span>
+<span style="font-size: 15px; color: #dbe2f6">bước cá nhân hóa tài khoản</span>
+</div>
+
+<div class="glass" style="border-radius: 18px; padding: 18px 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 36px; font-weight: 900; line-height: 1; color: #ffc53d">3</span>
+<span style="font-size: 15px; color: #dbe2f6">mẫu câu lệnh dùng ngay</span>
+</div>
+
+<div class="glass" style="border-radius: 18px; padding: 18px 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 36px; font-weight: 900; line-height: 1; color: #ffc53d">5</span>
+<span style="font-size: 15px; color: #dbe2f6">nhiệm vụ cần hoàn thành</span>
+</div>
+
+</div>
+</section>
+
+<!-- CÔNG CỤ AI -->
+<section id="cong-cu" style="padding: clamp(44px, 5vw, 84px) max(5vw, 16px); background: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 10px; max-width: 760px">
+<h2 style="margin: 0; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; font-weight: 900">Hệ sinh thái công cụ AI trong khóa học</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4a5168">ChatGPT là công cụ thực hành chính. Các công cụ còn lại được giới thiệu để học viên thấy cách phối hợp nhiều AI trong một quy trình làm việc.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px">
+
+<a href="https://chatgpt.com" class="lift" style="text-decoration: none; color: #10142a; background: #f5f7fc; border: 1px solid #e8ecf6; border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+
+<span style="width: 60px; height: 60px; border-radius: 18px; background: #ffffff; border: 2px solid #10a37f; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 22px rgba(16,163,127,.35)">
+<img src="assets/openai.svg" alt="Logo ChatGPT" style="width: 34px; height: 34px">
+</span>
+
+
+<span style="font-size: 12.5px; font-weight: 700; color: #0b6b53; background: #e7f7f1; padding: 5px 10px; border-radius: 999px">Thực hành chính</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<strong style="font-size: 19px">ChatGPT</strong>
+<span style="font-size: 14.5px; line-height: 1.5; color: #4a5168">Trợ lý cá nhân: soạn thảo, tổng hợp, lập kế hoạch.</span>
+</div>
+</a>
+
+<a href="https://gemini.google.com" class="lift" style="text-decoration: none; color: #10142a; background: #f5f7fc; border: 1px solid #e8ecf6; border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+
+<span style="width: 60px; height: 60px; border-radius: 18px; background: #ffffff; border: 2px solid #4f6ef7; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 22px rgba(79,110,247,.35)">
+<img src="assets/gemini.svg" alt="Logo Gemini" style="width: 34px; height: 34px">
+</span>
+
+
+<span style="font-size: 12.5px; font-weight: 700; color: #2f46b8; background: #eaeefe; padding: 5px 10px; border-radius: 999px">Giới thiệu</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<strong style="font-size: 19px">Gemini</strong>
+<span style="font-size: 14.5px; line-height: 1.5; color: #4a5168">AI của Google, gắn với Gmail, Drive, Docs.</span>
+</div>
+</a>
+
+<a href="https://claude.ai" class="lift" style="text-decoration: none; color: #10142a; background: #f5f7fc; border: 1px solid #e8ecf6; border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+
+<span style="width: 60px; height: 60px; border-radius: 18px; background: #ffffff; border: 2px solid #d97757; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 22px rgba(217,119,87,.35)">
+<img src="assets/claude.svg" alt="Logo Claude" style="width: 34px; height: 34px">
+</span>
+
+
+<span style="font-size: 12.5px; font-weight: 700; color: #9a4a2f; background: #fbeee8; padding: 5px 10px; border-radius: 999px">Giới thiệu</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<strong style="font-size: 19px">Claude</strong>
+<span style="font-size: 14.5px; line-height: 1.5; color: #4a5168">Viết dài, phân tích tài liệu, tạo sản phẩm hoàn chỉnh.</span>
+</div>
+</a>
+
+<a href="https://copilot.microsoft.com" class="lift" style="text-decoration: none; color: #10142a; background: #f5f7fc; border: 1px solid #e8ecf6; border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+
+<span style="width: 60px; height: 60px; border-radius: 18px; background: #ffffff; border: 2px solid #0f6cbd; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 22px rgba(15,108,189,.35)">
+<img src="assets/copilot.svg" alt="Logo Microsoft Copilot" style="width: 34px; height: 34px">
+</span>
+
+
+<span style="font-size: 12.5px; font-weight: 700; color: #0b4f8a; background: #e6f0fa; padding: 5px 10px; border-radius: 999px">Giới thiệu</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<strong style="font-size: 19px">Microsoft Copilot</strong>
+<span style="font-size: 14.5px; line-height: 1.5; color: #4a5168">AI trong Word, Excel, PowerPoint, Outlook.</span>
+</div>
+</a>
+
+<a href="https://notebooklm.google.com" class="lift" style="text-decoration: none; color: #10142a; background: #f5f7fc; border: 1px solid #e8ecf6; border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+
+<span style="width: 60px; height: 60px; border-radius: 18px; background: #ffffff; border: 2px solid #3b82f6; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 22px rgba(59,130,246,.35)">
+<img src="assets/notebooklm.png" alt="Logo Gemini Notebook (NotebookLM)" style="width: 34px; height: 34px">
+</span>
+
+
+<span style="font-size: 12.5px; font-weight: 700; color: #1d4ed8; background: #e8f0fe; padding: 5px 10px; border-radius: 999px">Giới thiệu</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<strong style="font-size: 19px">Gemini Notebook (NotebookLM)</strong>
+<span style="font-size: 14.5px; line-height: 1.5; color: #4a5168">Hỏi đáp và tóm tắt trên chính tài liệu của bạn.</span>
+</div>
+</a>
+
+<a href="https://www.canva.com" class="lift" style="text-decoration: none; color: #10142a; background: #f5f7fc; border: 1px solid #e8ecf6; border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+
+<span style="width: 60px; height: 60px; border-radius: 18px; background: #ffffff; border: 2px solid #00a8b5; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 22px rgba(0,168,181,.35)">
+<img src="assets/canva.png" alt="Logo Canva AI" style="width: 34px; height: 34px">
+</span>
+
+
+<span style="font-size: 12.5px; font-weight: 700; color: #006b73; background: #e3f7f8; padding: 5px 10px; border-radius: 999px">Giới thiệu</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<strong style="font-size: 19px">Canva AI</strong>
+<span style="font-size: 14.5px; line-height: 1.5; color: #4a5168">Thiết kế ấn phẩm, infographic, hình ảnh truyền thông.</span>
+</div>
+</a>
+
+</div>
+</div>
+</section>
+
+<!-- CHUẨN BỊ -->
+<section id="chuan-bi" style="padding: clamp(44px, 5vw, 84px) max(5vw, 16px); background: #f5f7fc">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 30px">
+<div style="display: flex; flex-direction: column; gap: 10px; max-width: 760px">
+<h2 style="margin: 0; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; font-weight: 900">4 việc cần làm <span style="color: #d7101f">trước</span> buổi tập huấn</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4a5168">Chuẩn bị tài khoản từ trước để vào lớp là thực hành được ngay.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px">
+
+<div class="lift" style="background: #ffffff; border-radius: 22px; padding: 26px; display: flex; flex-direction: column; gap: 14px; position: relative; overflow: hidden">
+<span style="position: absolute; right: 14px; top: 2px; font-size: 92px; font-weight: 900; color: #f0f2f8; line-height: 1">1</span>
+<span style="position: relative; width: 56px; height: 56px; border-radius: 16px; background: #d7101f; display: flex; align-items: center; justify-content: center">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z M22 6l-10 7L2 6"/></svg>
+</span>
+<h3 style="position: relative; margin: 0; font-size: 20px; line-height: 1.3; font-weight: 800">Tài khoản Gmail</h3>
+<p style="position: relative; margin: 0; font-size: 15.5px; line-height: 1.6; color: #383e52">Bắt buộc có tài khoản Gmail và nhớ đúng mật khẩu để dùng trong suốt khóa tập huấn.</p>
+</div>
+
+<div class="lift" style="background: #ffffff; border-radius: 22px; padding: 26px; display: flex; flex-direction: column; gap: 14px; position: relative; overflow: hidden">
+<span style="position: absolute; right: 14px; top: 2px; font-size: 92px; font-weight: 900; color: #f0f2f8; line-height: 1">2</span>
+<span style="position: relative; width: 56px; height: 56px; border-radius: 16px; background: #10a37f; display: flex; align-items: center; justify-content: center">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M8.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M20 8v6 M23 11h-6"/></svg>
+</span>
+<h3 style="position: relative; margin: 0; font-size: 20px; line-height: 1.3; font-weight: 800">Đăng ký ChatGPT bằng Gmail</h3>
+<p style="position: relative; margin: 0; font-size: 15.5px; line-height: 1.6; color: #383e52">Dùng Gmail ở mục 1 để đăng ký tài khoản OpenAI – ChatGPT tại chatgpt.com.</p>
+</div>
+
+<div class="lift" style="background: #ffffff; border-radius: 22px; padding: 26px; display: flex; flex-direction: column; gap: 14px; position: relative; overflow: hidden">
+<span style="position: absolute; right: 14px; top: 2px; font-size: 92px; font-weight: 900; color: #f0f2f8; line-height: 1">3</span>
+<span style="position: relative; width: 56px; height: 56px; border-radius: 16px; background: #386eff; display: flex; align-items: center; justify-content: center">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7 M4 10V3 M12 21v-9 M12 8V3 M20 21v-5 M20 12V3 M1 14h6 M9 8h6 M17 16h6"/></svg>
+</span>
+<h3 style="position: relative; margin: 0; font-size: 20px; line-height: 1.3; font-weight: 800">Cá nhân hóa tài khoản AI</h3>
+<p style="position: relative; margin: 0; font-size: 15.5px; line-height: 1.6; color: #383e52">Thiết lập thông tin, vai trò, lĩnh vực công việc và nhu cầu để AI hiểu đúng và hỗ trợ hiệu quả hơn.</p>
+</div>
+
+<div class="lift" style="background: #ffffff; border-radius: 22px; padding: 26px; display: flex; flex-direction: column; gap: 14px; position: relative; overflow: hidden">
+<span style="position: absolute; right: 14px; top: 2px; font-size: 92px; font-weight: 900; color: #f0f2f8; line-height: 1">4</span>
+<span style="position: relative; width: 56px; height: 56px; border-radius: 16px; background: #f59e0b; display: flex; align-items: center; justify-content: center">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 4h22v16H1z M1 10h22"/></svg>
+</span>
+<h3 style="position: relative; margin: 0; font-size: 20px; line-height: 1.3; font-weight: 800">Thẻ thanh toán quốc tế</h3>
+<p style="position: relative; margin: 0; font-size: 15.5px; line-height: 1.6; color: #383e52">Chỉ khi muốn dùng gói nâng cao như ChatGPT Plus: chuẩn bị thẻ Visa/Mastercard để thanh toán trực tuyến.</p>
+</div>
+
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: stretch">
+<div style="flex: 1 1 320px; background: #10142a; color: #ffffff; border-radius: 22px; padding: 26px; display: flex; flex-direction: column; gap: 12px; justify-content: center">
+<strong style="font-size: 20px; color: #ffc53d">Lưu ý chung</strong>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #dbe2f6">Dùng chính email cá nhân, thông tin chính xác và bảo mật tài khoản. Gặp khó khăn khi chuẩn bị, gọi hoặc nhắn Zalo <strong style="color: #ffffff">0949 381 391</strong> để được hỗ trợ.</p>
+</div>
+<a href="assets/g1.jpg" class="lift" style="flex: 2 1 520px; display: block; border-radius: 22px; overflow: hidden; background: #ffffff">
+<img src="assets/g1.jpg" alt="Infographic: Những điểm học viên cần lưu ý trước khi tham gia tập huấn" style="width: 100%; height: auto">
+</a>
+</div>
+</div>
+</section>
+
+<!-- CÁ NHÂN HÓA -->
+<section id="ca-nhan-hoa" style="padding: clamp(44px, 5vw, 84px) max(5vw, 16px); background: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 30px">
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-end; justify-content: space-between">
+<div style="flex: 1 1 520px; display: flex; flex-direction: column; gap: 10px">
+<h2 style="margin: 0; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; font-weight: 900">Cá nhân hóa ChatGPT trong 6 bước</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4a5168">Ảnh đại diện → Settings → Personalization. Trên điện thoại có thể là Settings → Customize ChatGPT; tên mục thay đổi theo phiên bản và gói tài khoản.</p>
+</div>
+<span style="display: inline-flex; align-items: center; gap: 10px; background: #e7f7f1; color: #0b6b53; font-weight: 700; font-size: 15px; padding: 10px 16px; border-radius: 12px">
+<img src="assets/openai.svg" alt="Logo ChatGPT" style="width: 24px; height: 24px">
+chatgpt.com</span>
+</div>
+<ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px">
+
+<li class="lift" style="background: #f5f7fc; border-radius: 20px; padding: 22px; display: flex; gap: 16px; align-items: flex-start; border: 1px solid #e8ecf6">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 14px; background: #d7101f; color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 19px">1</span>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<strong style="font-size: 17.5px">Đăng nhập ChatGPT</strong>
+<span style="font-size: 15px; line-height: 1.55; color: #4a5168">Vào chatgpt.com, đăng nhập bằng Gmail đã đăng ký; chọn giao diện tiếng Việt nếu có.</span>
+</div>
+</li>
+
+<li class="lift" style="background: #f5f7fc; border-radius: 20px; padding: 22px; display: flex; gap: 16px; align-items: flex-start; border: 1px solid #e8ecf6">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 14px; background: #f97316; color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 19px">2</span>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<strong style="font-size: 17.5px">Mở phần cá nhân hóa</strong>
+<span style="font-size: 15px; line-height: 1.55; color: #4a5168">Nhấn ảnh đại diện → Settings (Cài đặt) → Personalization (Cá nhân hóa).</span>
+</div>
+</li>
+
+<li class="lift" style="background: #f5f7fc; border-radius: 20px; padding: 22px; display: flex; gap: 16px; align-items: flex-start; border: 1px solid #d7101f">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 14px; background: #f59e0b; color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 19px">3</span>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<strong style="font-size: 17.5px">Khai báo Custom Instructions</strong>
+<span style="font-size: 15px; line-height: 1.55; color: #4a5168">Bước quan trọng nhất: cho ChatGPT biết bạn là ai, làm gì và muốn được hỗ trợ ra sao. Dùng hai mẫu bên dưới.</span>
+</div>
+</li>
+
+<li class="lift" style="background: #f5f7fc; border-radius: 20px; padding: 22px; display: flex; gap: 16px; align-items: flex-start; border: 1px solid #e8ecf6">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 14px; background: #10a37f; color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 19px">4</span>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<strong style="font-size: 17.5px">Thiết lập bộ nhớ (Memory)</strong>
+<span style="font-size: 15px; line-height: 1.55; color: #4a5168">Kiểm tra trạng thái bật/tắt; bật nếu muốn AI giữ thông tin hữu ích, không nhạy cảm giữa các cuộc trò chuyện.</span>
+</div>
+</li>
+
+<li class="lift" style="background: #f5f7fc; border-radius: 20px; padding: 22px; display: flex; gap: 16px; align-items: flex-start; border: 1px solid #e8ecf6">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 14px; background: #386eff; color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 19px">5</span>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<strong style="font-size: 17.5px">Chọn phong cách phản hồi</strong>
+<span style="font-size: 15px; line-height: 1.55; color: #4a5168">Chuyên nghiệp, thân thiện; ngắn gọn mà đủ; có tiêu đề, ví dụ; tiếng Việt chuẩn; tách thông tin đã xác thực với suy luận.</span>
+</div>
+</li>
+
+<li class="lift" style="background: #f5f7fc; border-radius: 20px; padding: 22px; display: flex; gap: 16px; align-items: flex-start; border: 1px solid #e8ecf6">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 14px; background: #7b3ff2; color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 19px">6</span>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<strong style="font-size: 17.5px">Kiểm tra kết quả</strong>
+<span style="font-size: 15px; line-height: 1.55; color: #4a5168">Mở cuộc trò chuyện mới, yêu cầu ChatGPT giới thiệu 5 nhóm nhiệm vụ nó sẽ hỗ trợ bạn dựa trên thiết lập.</span>
+</div>
+</li>
+
+</ol>
+</div>
+</section>
+
+<!-- TẢI TÀI LIỆU -->
+<section id="tai-lieu" style="padding: 0 max(5vw, 16px) clamp(44px, 5vw, 84px); background: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; border-radius: 28px; overflow: hidden; background: linear-gradient(120deg, #d7101f 0%, #a30c18 100%); color: #ffffff; display: flex; flex-wrap: wrap; align-items: center">
+<div style="flex: 1 1 300px; padding: clamp(24px, 4vw, 44px); display: flex; justify-content: center; align-self: stretch; background: rgba(0,0,0,.12)">
+<a href="assets/Cam_nang_ca_nhan_hoa_ChatGPT.pdf" class="lift" style="display: block; width: min(300px, 100%); border-radius: 10px; overflow: hidden; box-shadow: 0 24px 50px rgba(0,0,0,.4); transform: rotate(-3deg)">
+<img src="assets/cover.jpg" alt="Trang bìa cẩm nang Quy trình cá nhân hóa tài khoản ChatGPT" style="width: 100%; height: auto">
+</a>
+</div>
+<div style="flex: 1.4 1 420px; padding: clamp(28px, 4vw, 52px); display: flex; flex-direction: column; gap: 16px">
+<span style="align-self: flex-start; background: #ffc53d; color: #10142a; border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 800">Tài liệu cho học viên</span>
+<h2 style="margin: 0; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.1; font-weight: 900">Tải cẩm nang: Quy trình cá nhân hóa tài khoản ChatGPT</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #ffe3e5">10 trang, có hình minh họa: 6 bước thực hiện, mẫu Custom Instructions, hướng dẫn Memory, phong cách phản hồi, bài tập kiểm tra và phiếu tự đánh giá.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 4px">
+<a href="assets/Cam_nang_ca_nhan_hoa_ChatGPT.pdf" style="display: inline-flex; align-items: center; gap: 12px; min-height: 58px; padding: 0 22px; background: #ffffff; color: #d7101f; border-radius: 14px; font-weight: 800; font-size: 17px; text-decoration: none; box-shadow: 0 10px 26px rgba(0,0,0,.25)">
+<span style="background: #d7101f; color: #ffffff; border-radius: 7px; padding: 4px 7px; font-size: 12px; font-weight: 900">PDF</span>
+Tải bản PDF</a>
+<a href="assets/Cam_nang_ca_nhan_hoa_ChatGPT.docx" style="display: inline-flex; align-items: center; gap: 12px; min-height: 58px; padding: 0 22px; background: #10142a; color: #ffffff; border-radius: 14px; font-weight: 800; font-size: 17px; text-decoration: none">
+<span style="background: #2b579a; color: #ffffff; border-radius: 7px; padding: 4px 7px; font-size: 12px; font-weight: 900">DOCX</span>
+Tải bản Word</a>
+</div>
+<span style="font-size: 14px; color: #ffd0d4">PDF để đọc và in; bản Word để học viên chỉnh sửa mẫu theo công việc của mình.</span>
+</div>
+</div>
+</section>
+
+<!-- MẪU CÂU LỆNH -->
+<section class="dark" style="padding: clamp(44px, 5vw, 84px) max(5vw, 16px); color: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 10px; max-width: 780px">
+<h2 style="margin: 0; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; font-weight: 900">Mẫu câu lệnh: sao chép, sửa, dán</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #c9d2ec">Thay phần trong ngoặc vuông bằng thông tin thật; điều chỉnh theo nghề nghiệp của mình (kế toán, nhân sự, cán bộ hành chính, chuyên viên kỹ thuật…).</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 18px">
+
+<div class="glass" style="border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
+<div style="display: flex; flex-direction: column; gap: 3px">
+<strong style="font-size: 17px">Ô 1 · ChatGPT cần biết gì về tôi</strong>
+<span style="font-size: 13px; color: #aab6d8">Dán vào: What would you like ChatGPT to know about you?</span>
+</div>
+<button type="button" data-copy="o1" style="min-height: 44px; padding: 0 18px; border: 0; border-radius: 12px; background: #ffc53d; color: #10142a; font: 800 15px 'Be Vietnam Pro', sans-serif; cursor: pointer">Sao chép</button>
+</div>
+<pre style="margin: 0; white-space: pre-wrap; font: 14.5px/1.6 'Be Vietnam Pro', sans-serif; color: #e3e8f7; background: rgba(0,0,0,.28); border-radius: 14px; padding: 16px; max-height: 340px; overflow: auto">Tôi tên là [HỌ VÀ TÊN], hiện đang công tác tại [TÊN CƠ QUAN/ĐƠN VỊ], giữ vị trí [CHỨC VỤ/VỊ TRÍ CÔNG TÁC].
+Lĩnh vực công tác chính của tôi là [LĨNH VỰC CHUYÊN MÔN].
+Các nhiệm vụ thường xuyên của tôi bao gồm:
+- Soạn thảo văn bản, báo cáo và tài liệu chuyên môn.
+- Tổng hợp, phân tích thông tin và dữ liệu.
+- Lập kế hoạch, tổ chức và triển khai công việc.
+- Tra cứu, nghiên cứu và cập nhật kiến thức.
+- Ứng dụng công nghệ số và trí tuệ nhân tạo (AI) để nâng cao hiệu quả công việc.
+Tôi mong muốn sử dụng ChatGPT như một trợ lý AI cá nhân để hỗ trợ công việc chuyên môn, quản lý, nghiên cứu, học tập và xử lý các nhiệm vụ hằng ngày.
+Tôi sử dụng tiếng Việt là ngôn ngữ giao tiếp chính.</pre>
+</div>
+
+<div class="glass" style="border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
+<div style="display: flex; flex-direction: column; gap: 3px">
+<strong style="font-size: 17px">Ô 2 · Phong cách phản hồi mong muốn</strong>
+<span style="font-size: 13px; color: #aab6d8">Dán vào: How would you like ChatGPT to respond?</span>
+</div>
+<button type="button" data-copy="o2" style="min-height: 44px; padding: 0 18px; border: 0; border-radius: 12px; background: #ffc53d; color: #10142a; font: 800 15px 'Be Vietnam Pro', sans-serif; cursor: pointer">Sao chép</button>
+</div>
+<pre style="margin: 0; white-space: pre-wrap; font: 14.5px/1.6 'Be Vietnam Pro', sans-serif; color: #e3e8f7; background: rgba(0,0,0,.28); border-radius: 14px; padding: 16px; max-height: 340px; overflow: auto">Hãy phản hồi với tôi theo các nguyên tắc sau:
+1. Sử dụng tiếng Việt chuẩn, rõ ràng, chuyên nghiệp và dễ hiểu.
+2. Trình bày có cấu trúc, phân chia tiêu đề, đề mục và gạch đầu dòng hợp lý.
+3. Trả lời trực tiếp vào vấn đề, đầy đủ nhưng tránh dài dòng.
+4. Ưu tiên tính thực tiễn, đưa ra ví dụ và hướng dẫn từng bước khi cần thiết.
+5. Đối với văn bản hành chính, sử dụng văn phong chuẩn mực, trang trọng và phù hợp quy định hiện hành.
+6. Đối với nghiên cứu khoa học, phân tích có lập luận, phương pháp và dẫn nguồn khi có thể kiểm chứng.
+7. Đối với các vấn đề công nghệ và AI, ưu tiên hướng dẫn cụ thể, có quy trình và ví dụ thực hành.
+8. Không tự suy diễn hoặc tạo ra số liệu, văn bản pháp luật, tài liệu tham khảo và nguồn trích dẫn không có thật.
+9. Nếu thông tin chưa rõ hoặc chưa đủ, hãy hỏi lại trước khi kết luận.
+10. Nếu vấn đề liên quan đến thông tin mới, quy định hiện hành hoặc công nghệ thay đổi nhanh, hãy kiểm tra nguồn đáng tin cậy và nêu rõ thời điểm tham chiếu.
+Hãy đóng vai trò là một trợ lý AI chuyên nghiệp, chủ động, có tư duy phân tích và luôn hướng đến giải pháp thực tế.</pre>
+</div>
+
+<div class="glass" style="border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
+<div style="display: flex; flex-direction: column; gap: 3px">
+<strong style="font-size: 17px">Câu lệnh ghi nhớ (Memory)</strong>
+<span style="font-size: 13px; color: #aab6d8">Gửi trong một cuộc trò chuyện mới</span>
+</div>
+<button type="button" data-copy="o3" style="min-height: 44px; padding: 0 18px; border: 0; border-radius: 12px; background: #ffc53d; color: #10142a; font: 800 15px 'Be Vietnam Pro', sans-serif; cursor: pointer">Sao chép</button>
+</div>
+<pre style="margin: 0; white-space: pre-wrap; font: 14.5px/1.6 'Be Vietnam Pro', sans-serif; color: #e3e8f7; background: rgba(0,0,0,.28); border-radius: 14px; padding: 16px; max-height: 340px; overflow: auto">Hãy ghi nhớ những thông tin hữu ích sau đây để hỗ trợ tôi trong các cuộc trò chuyện tiếp theo:
+- Tôi làm việc trong lĩnh vực [lĩnh vực công tác].
+- Công việc thường xuyên của tôi là [nhiệm vụ].
+- Tôi ưu tiên sử dụng tiếng Việt.
+- Tôi thích câu trả lời có cấu trúc, rõ ràng và có ví dụ thực tế.
+- Khi hướng dẫn sử dụng công nghệ, hãy trình bày từng bước cụ thể.
+Chỉ ghi nhớ những thông tin phù hợp và có giá trị sử dụng lâu dài.</pre>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- MEMORY + CHECKLIST + BÀI TẬP -->
+<section style="padding: clamp(44px, 5vw, 84px) max(5vw, 16px); background: #f5f7fc">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 18px">
+<div style="background: #ffffff; border-radius: 22px; padding: 26px; display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-size: 22px; font-weight: 900">Custom Instructions và Memory</h3>
+<div style="display: grid; grid-template-columns: 96px minmax(0,1fr) minmax(0,1fr); font-size: 14.5px; line-height: 1.5; border-radius: 14px; overflow: hidden; border: 1px solid #e8ecf6">
+<span style="padding: 11px; background: #10142a; color: #ffffff; font-weight: 700">Tiêu chí</span><span style="padding: 11px; background: #10142a; color: #ffffff; font-weight: 700">Custom Instructions</span><span style="padding: 11px; background: #d7101f; color: #ffffff; font-weight: 700">Memory</span>
+<span style="padding: 11px; border-top: 1px solid #e8ecf6; font-weight: 700">Bản chất</span><span style="padding: 11px; border-top: 1px solid #e8ecf6">Hướng dẫn do người dùng thiết lập</span><span style="padding: 11px; border-top: 1px solid #e8ecf6">Thông tin ChatGPT có thể ghi nhớ</span>
+<span style="padding: 11px; border-top: 1px solid #e8ecf6; font-weight: 700">Nội dung</span><span style="padding: 11px; border-top: 1px solid #e8ecf6">Vai trò, yêu cầu, phong cách phản hồi</span><span style="padding: 11px; border-top: 1px solid #e8ecf6">Sở thích, thông tin, bối cảnh hữu ích</span>
+<span style="padding: 11px; border-top: 1px solid #e8ecf6; font-weight: 700">Cập nhật</span><span style="padding: 11px; border-top: 1px solid #e8ecf6">Người dùng chủ động sửa</span><span style="padding: 11px; border-top: 1px solid #e8ecf6">Tự động hoặc theo yêu cầu</span>
+<span style="padding: 11px; border-top: 1px solid #e8ecf6; font-weight: 700">Mục đích</span><span style="padding: 11px; border-top: 1px solid #e8ecf6">Định hướng cách AI làm việc</span><span style="padding: 11px; border-top: 1px solid #e8ecf6">Giữ bối cảnh qua các cuộc trò chuyện</span>
+</div>
+<p style="margin: 0; font-size: 14px; color: #4a5168">Kiểm tra lại những gì đã được ghi nhớ; đừng mặc định ChatGPT lưu mọi chi tiết.</p>
+</div>
+<div style="background: #ffffff; border-radius: 22px; padding: 26px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
+<h3 style="margin: 0; font-size: 22px; font-weight: 900">Phiếu tự đánh giá</h3>
+<span style="font-size: 15px; font-weight: 800; color: #d7101f"><span id="dc">0</span>/5</span>
+</div>
+<div style="height: 10px; background: #eef1f8; border-radius: 999px; overflow: hidden"><div id="bar" style="height: 100%; width: 0%; background: linear-gradient(90deg, #d7101f, #ffc53d); border-radius: 999px"></div></div>
+
+<label style="display: flex; gap: 12px; align-items: center; min-height: 46px; font-size: 15.5px; cursor: pointer; border-bottom: 1px solid #f0f2f8">
+<input type="checkbox" class="chk" style="width: 22px; height: 22px; accent-color: #d7101f; flex: none">
+<span>Đã đăng nhập thành công tài khoản ChatGPT.</span>
+</label>
+
+<label style="display: flex; gap: 12px; align-items: center; min-height: 46px; font-size: 15.5px; cursor: pointer; border-bottom: 1px solid #f0f2f8">
+<input type="checkbox" class="chk" style="width: 22px; height: 22px; accent-color: #d7101f; flex: none">
+<span>Đã truy cập Settings → Personalization.</span>
+</label>
+
+<label style="display: flex; gap: 12px; align-items: center; min-height: 46px; font-size: 15.5px; cursor: pointer; border-bottom: 1px solid #f0f2f8">
+<input type="checkbox" class="chk" style="width: 22px; height: 22px; accent-color: #d7101f; flex: none">
+<span>Đã bật và thiết lập Custom Instructions.</span>
+</label>
+
+<label style="display: flex; gap: 12px; align-items: center; min-height: 46px; font-size: 15.5px; cursor: pointer; border-bottom: 1px solid #f0f2f8">
+<input type="checkbox" class="chk" style="width: 22px; height: 22px; accent-color: #d7101f; flex: none">
+<span>Đã khai báo thông tin cá nhân, nghề nghiệp và lĩnh vực công tác.</span>
+</label>
+
+<label style="display: flex; gap: 12px; align-items: center; min-height: 46px; font-size: 15.5px; cursor: pointer; border-bottom: 1px solid #f0f2f8">
+<input type="checkbox" class="chk" style="width: 22px; height: 22px; accent-color: #d7101f; flex: none">
+<span>Đã thiết lập phong cách phản hồi mong muốn.</span>
+</label>
+
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-size: 24px; font-weight: 900">Kiểm tra kết quả cá nhân hóa</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
+
+<div class="lift" style="background: #ffffff; border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+<strong style="font-size: 15px; color: #d7101f">Bước 6 · Câu lệnh kiểm tra</strong>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.6; flex-grow: 1">Tôi muốn bạn giới thiệu cách bạn sẽ hỗ trợ tôi trong công việc. Hãy căn cứ vào thông tin cá nhân, vai trò công tác, lĩnh vực chuyên môn và phong cách phản hồi mà tôi đã thiết lập. Hãy trình bày thành 5 nhóm nhiệm vụ hỗ trợ chính.</p>
+<button type="button" data-copy="t0" style="align-self: flex-start; min-height: 44px; padding: 0 16px; border: 0; border-radius: 12px; background: #10142a; color: #ffffff; font: 700 14.5px 'Be Vietnam Pro', sans-serif; cursor: pointer">Sao chép câu lệnh</button>
+</div>
+
+<div class="lift" style="background: #ffffff; border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+<strong style="font-size: 15px; color: #d7101f">Bài 1 · Nhận diện người dùng</strong>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.6; flex-grow: 1">Hãy giới thiệu những thông tin bạn biết về tôi, công việc và lĩnh vực chuyên môn của tôi.</p>
+<button type="button" data-copy="t1" style="align-self: flex-start; min-height: 44px; padding: 0 16px; border: 0; border-radius: 12px; background: #10142a; color: #ffffff; font: 700 14.5px 'Be Vietnam Pro', sans-serif; cursor: pointer">Sao chép câu lệnh</button>
+</div>
+
+<div class="lift" style="background: #ffffff; border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+<strong style="font-size: 15px; color: #d7101f">Bài 2 · Phong cách phản hồi</strong>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.6; flex-grow: 1">Hãy xây dựng cho tôi kế hoạch làm việc trong một tuần, trình bày dưới dạng bảng, có nhiệm vụ, thời gian và kết quả cần đạt.</p>
+<button type="button" data-copy="t2" style="align-self: flex-start; min-height: 44px; padding: 0 16px; border: 0; border-radius: 12px; background: #10142a; color: #ffffff; font: 700 14.5px 'Be Vietnam Pro', sans-serif; cursor: pointer">Sao chép câu lệnh</button>
+</div>
+
+<div class="lift" style="background: #ffffff; border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+<strong style="font-size: 15px; color: #d7101f">Bài 3 · Hỗ trợ chuyên môn</strong>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.6; flex-grow: 1">Hãy đề xuất 5 cách ứng dụng AI vào công việc chuyên môn của tôi. Với mỗi cách, hãy nêu công cụ, quy trình thực hiện và hiệu quả dự kiến.</p>
+<button type="button" data-copy="t3" style="align-self: flex-start; min-height: 44px; padding: 0 16px; border: 0; border-radius: 12px; background: #10142a; color: #ffffff; font: 700 14.5px 'Be Vietnam Pro', sans-serif; cursor: pointer">Sao chép câu lệnh</button>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- NÂNG CẤP GÓI -->
+<section id="nang-cap" style="padding: clamp(44px, 5vw, 84px) max(5vw, 16px); background: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 10px; max-width: 820px">
+<h2 style="margin: 0; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; font-weight: 900">Nâng cấp gói AI <span style="color: #4a5168; font-weight: 700; font-size: 0.6em">(nếu có nhu cầu)</span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4a5168">Gói miễn phí đủ để học. Muốn dùng gói nâng cao cần thẻ thanh toán quốc tế (Visa/Mastercard). Giá dưới đây lấy theo ảnh chụp màn hình trong tài liệu chuẩn bị; giá và quyền lợi thay đổi theo thời điểm, hãy xem lại trên trang chính thức trước khi thanh toán.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 18px">
+
+<div class="lift" style="border-radius: 22px; overflow: hidden; border: 1px solid #e8ecf6; display: flex; flex-direction: column; background: #ffffff">
+<div style="background: #10a37f; color: #ffffff; padding: 20px 22px; display: flex; align-items: center; gap: 14px">
+<span style="width: 52px; height: 52px; border-radius: 15px; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 16px rgba(0,0,0,.18)">
+<img src="assets/openai.svg" alt="Logo ChatGPT" style="width: 30px; height: 30px">
+</span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<strong style="font-size: 21px">ChatGPT</strong>
+<a href="https://chatgpt.com" style="color: #ffffff; font-size: 14px; opacity: .9">chatgpt.com</a>
+</div>
+</div>
+<div style="padding: 8px 22px 18px; display: flex; flex-direction: column">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 13px 0; border-bottom: 1px solid #f0f2f8">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<strong style="font-size: 16px">Go</strong>
+<span style="font-size: 13.5px; color: #4a5168">Dùng thường xuyên, có quảng cáo</span>
+</div>
+<span style="font-size: 16px; font-weight: 800; white-space: nowrap; text-align: right">132.000 đ/tháng</span>
+</div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 13px 0; border-bottom: 1px solid #f0f2f8">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<strong style="font-size: 16px">Plus</strong>
+<span style="font-size: 13.5px; color: #4a5168">Khuyên dùng cho làm việc, giảng dạy</span>
+</div>
+<span style="font-size: 16px; font-weight: 800; white-space: nowrap; text-align: right">522.500 đ/tháng</span>
+</div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 13px 0; border-bottom: 1px solid #f0f2f8">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<strong style="font-size: 16px">Pro</strong>
+<span style="font-size: 13.5px; color: #4a5168">Nhu cầu rất cao, chuyên sâu</span>
+</div>
+<span style="font-size: 16px; font-weight: 800; white-space: nowrap; text-align: right">2.849.000 đ/tháng</span>
+</div>
+
+</div>
+</div>
+
+<div class="lift" style="border-radius: 22px; overflow: hidden; border: 1px solid #e8ecf6; display: flex; flex-direction: column; background: #ffffff">
+<div style="background: #4f6ef7; color: #ffffff; padding: 20px 22px; display: flex; align-items: center; gap: 14px">
+<span style="width: 52px; height: 52px; border-radius: 15px; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 16px rgba(0,0,0,.18)">
+<img src="assets/gemini.svg" alt="Logo Google AI (Gemini)" style="width: 30px; height: 30px">
+</span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<strong style="font-size: 21px">Google AI (Gemini)</strong>
+<a href="https://gemini.google.com" style="color: #ffffff; font-size: 14px; opacity: .9">gemini.google.com</a>
+</div>
+</div>
+<div style="padding: 8px 22px 18px; display: flex; flex-direction: column">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 13px 0; border-bottom: 1px solid #f0f2f8">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<strong style="font-size: 16px">Google AI Plus</strong>
+<span style="font-size: 13.5px; color: #4a5168">Bộ nhớ 400 GB</span>
+</div>
+<span style="font-size: 16px; font-weight: 800; white-space: nowrap; text-align: right">132.000 đ/tháng</span>
+</div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 13px 0; border-bottom: 1px solid #f0f2f8">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<strong style="font-size: 16px">Google AI Pro</strong>
+<span style="font-size: 13.5px; color: #4a5168">Deep Research, tạo video; 5 TB</span>
+</div>
+<span style="font-size: 16px; font-weight: 800; white-space: nowrap; text-align: right">489.000 đ/tháng</span>
+</div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 13px 0; border-bottom: 1px solid #f0f2f8">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<strong style="font-size: 16px">Google AI Ultra</strong>
+<span style="font-size: 13.5px; color: #4a5168">Hạn mức cao nhất; 20 TB</span>
+</div>
+<span style="font-size: 16px; font-weight: 800; white-space: nowrap; text-align: right">từ 2.250.000 đ/tháng</span>
+</div>
+
+</div>
+</div>
+
+<div class="lift" style="border-radius: 22px; overflow: hidden; border: 1px solid #e8ecf6; display: flex; flex-direction: column; background: #ffffff">
+<div style="background: #d97757; color: #ffffff; padding: 20px 22px; display: flex; align-items: center; gap: 14px">
+<span style="width: 52px; height: 52px; border-radius: 15px; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 16px rgba(0,0,0,.18)">
+<img src="assets/claude.svg" alt="Logo Claude" style="width: 30px; height: 30px">
+</span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<strong style="font-size: 21px">Claude</strong>
+<a href="https://claude.ai" style="color: #ffffff; font-size: 14px; opacity: .9">claude.ai</a>
+</div>
+</div>
+<div style="padding: 8px 22px 18px; display: flex; flex-direction: column">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 13px 0; border-bottom: 1px solid #f0f2f8">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<strong style="font-size: 16px">Pro</strong>
+<span style="font-size: 13.5px; color: #4a5168">Trả theo năm 200 USD; bộ nhớ qua các cuộc trò chuyện</span>
+</div>
+<span style="font-size: 16px; font-weight: 800; white-space: nowrap; text-align: right">17 USD/tháng</span>
+</div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 13px 0; border-bottom: 1px solid #f0f2f8">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<strong style="font-size: 16px">Max và Ultra</strong>
+<span style="font-size: 13.5px; color: #4a5168">Hạn mức cao, ưu tiên truy cập</span>
+</div>
+<span style="font-size: 16px; font-weight: 800; white-space: nowrap; text-align: right">từ 100 USD/tháng</span>
+</div>
+
+</div>
+</div>
+
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 18px">
+<div style="background: #f5f7fc; border-radius: 22px; padding: 26px; display: flex; flex-direction: column; gap: 12px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 900">Nâng cấp ChatGPT trong 5 bước</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.7">1. Vào chatgpt.com, đăng nhập. 2. Nhấn ảnh đại diện góc dưới bên trái, chọn Upgrade. 3. Chọn gói Go, Plus hoặc Pro. 4. Chọn phương thức thanh toán và hoàn tất. 5. Bắt đầu dùng tính năng của gói mới.</p>
+<p style="margin: 0; font-size: 14px; color: #4a5168">Nên nâng cấp trên website để xem đủ gói và giá hiện hành.</p>
+</div>
+<div style="background: #f5f7fc; border-radius: 22px; padding: 26px; display: flex; flex-direction: column; gap: 12px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 900">Mở thẻ Mastercard qua VCB Digibank (tham khảo)</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.7">Đăng nhập VCB Digibank → Dịch vụ thẻ → Quản lý dịch vụ thẻ → Mở mới/Phát hành thẻ → chọn thẻ, nhập thông tin → xác thực OTP hoặc khuôn mặt → theo dõi trạng thái, nhận thẻ và kích hoạt.</p>
+<p style="margin: 0; font-size: 14px; color: #4a5168">Điều kiện, phí và loại thẻ do ngân hàng quy định và có thể thay đổi.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- THƯ VIỆN HÌNH ẢNH -->
+<section style="padding: clamp(44px, 5vw, 84px) max(5vw, 16px); background: #f5f7fc">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 26px">
+<div style="display: flex; flex-direction: column; gap: 10px; max-width: 760px">
+<h2 style="margin: 0; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; font-weight: 900">Thư viện tài liệu hình ảnh</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4a5168">Bấm vào từng hình để mở bản lớn. Hình giao diện mang tính minh họa phục vụ đào tạo.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px">
+
+<a href="assets/Cam_nang_ca_nhan_hoa_ChatGPT.pdf" class="lift" style="text-decoration: none; color: #10142a; background: #ffffff; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<img src="assets/cover.jpg" alt="Cẩm nang cá nhân hóa ChatGPT (PDF)" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top">
+<div style="padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; gap: 10px">
+<strong style="font-size: 15.5px">Cẩm nang cá nhân hóa ChatGPT (PDF)</strong>
+<span style="font-size: 12.5px; font-weight: 700; color: #ffffff; background: #10142a; padding: 4px 10px; border-radius: 999px; white-space: nowrap">Tải về</span>
+</div>
+</a>
+
+<a href="assets/g1.jpg" class="lift" style="text-decoration: none; color: #10142a; background: #ffffff; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<img src="assets/g1.jpg" alt="Lưu ý trước khi tập huấn" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top">
+<div style="padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; gap: 10px">
+<strong style="font-size: 15.5px">Lưu ý trước khi tập huấn</strong>
+<span style="font-size: 12.5px; font-weight: 700; color: #ffffff; background: #d7101f; padding: 4px 10px; border-radius: 999px; white-space: nowrap">Chuẩn bị</span>
+</div>
+</a>
+
+<a href="assets/g2.jpg" class="lift" style="text-decoration: none; color: #10142a; background: #ffffff; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<img src="assets/g2.jpg" alt="Hướng dẫn nâng cấp gói ChatGPT" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top">
+<div style="padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; gap: 10px">
+<strong style="font-size: 15.5px">Hướng dẫn nâng cấp gói ChatGPT</strong>
+<span style="font-size: 12.5px; font-weight: 700; color: #ffffff; background: #10a37f; padding: 4px 10px; border-radius: 999px; white-space: nowrap">ChatGPT</span>
+</div>
+</a>
+
+<a href="assets/g3.jpg" class="lift" style="text-decoration: none; color: #10142a; background: #ffffff; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<img src="assets/g3.jpg" alt="Mở thẻ Mastercard qua VCB Digibank" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top">
+<div style="padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; gap: 10px">
+<strong style="font-size: 15.5px">Mở thẻ Mastercard qua VCB Digibank</strong>
+<span style="font-size: 12.5px; font-weight: 700; color: #ffffff; background: #f59e0b; padding: 4px 10px; border-radius: 999px; white-space: nowrap">Thanh toán</span>
+</div>
+</a>
+
+<a href="assets/p1.jpg" class="lift" style="text-decoration: none; color: #10142a; background: #ffffff; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<img src="assets/p1.jpg" alt="Các gói ChatGPT" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top">
+<div style="padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; gap: 10px">
+<strong style="font-size: 15.5px">Các gói ChatGPT</strong>
+<span style="font-size: 12.5px; font-weight: 700; color: #ffffff; background: #10a37f; padding: 4px 10px; border-radius: 999px; white-space: nowrap">ChatGPT</span>
+</div>
+</a>
+
+<a href="assets/p3.jpg" class="lift" style="text-decoration: none; color: #10142a; background: #ffffff; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<img src="assets/p3.jpg" alt="Các gói Google AI (Gemini)" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top">
+<div style="padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; gap: 10px">
+<strong style="font-size: 15.5px">Các gói Google AI (Gemini)</strong>
+<span style="font-size: 12.5px; font-weight: 700; color: #ffffff; background: #4f6ef7; padding: 4px 10px; border-radius: 999px; white-space: nowrap">Gemini</span>
+</div>
+</a>
+
+<a href="assets/p2.jpg" class="lift" style="text-decoration: none; color: #10142a; background: #ffffff; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<img src="assets/p2.jpg" alt="Các gói Claude" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top">
+<div style="padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; gap: 10px">
+<strong style="font-size: 15.5px">Các gói Claude</strong>
+<span style="font-size: 12.5px; font-weight: 700; color: #ffffff; background: #d97757; padding: 4px 10px; border-radius: 999px; white-space: nowrap">Claude</span>
+</div>
+</a>
+
+</div>
+</div>
+</section>
+
+<!-- TÁC GIẢ -->
+<section id="tac-gia" class="hero" style="padding: clamp(48px, 6vw, 96px) max(5vw, 16px); color: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 1 1 340px; display: flex; gap: 16px; align-items: flex-end; justify-content: center">
+<img src="assets/portrait2.jpg" alt="PGS.TS. Nguyễn Quang Tuấn" style="width: min(360px, 100%); aspect-ratio: 9 / 13; object-fit: cover; object-position: center 30%; border-radius: 24px; border: 4px solid rgba(255,255,255,.85); box-shadow: 0 24px 60px rgba(0,0,0,.45)">
+
+</div>
+<div style="flex: 1 1 460px; display: flex; flex-direction: column; gap: 16px">
+<span style="align-self: flex-start; background: #d7101f; border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 700">Tác giả · Báo cáo viên</span>
+<h2 style="margin: 0; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.05; font-weight: 900">PGS.TS. Nguyễn Quang Tuấn</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #dbe2f6; max-width: 620px">Viện Chuyển đổi số và Học liệu, Đại học Huế. Chuyên môn: Hệ thống thông tin địa lý (GIS), Viễn thám, GeoAI, trí tuệ nhân tạo, chuyển đổi số và năng lực số. Hướng tiếp cận: đưa AI từ công cụ cá nhân thành năng lực làm việc thực chất của mỗi người và mỗi tổ chức.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; padding-top: 6px">
+<a href="tel:0949381391" target="_top" style="display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 10px 18px; background: #d7101f; color: #ffffff; border-radius: 16px; text-decoration: none; box-shadow: 0 10px 30px rgba(215,16,31,.45)">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+<span style="display: flex; flex-direction: column"><span style="font-size: 13px; opacity: .9">Điện thoại</span><strong style="font-size: 19px; white-space: nowrap">0949 381 391</strong></span>
+</a>
+<a href="https://zalo.me/0949381391" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 10px 18px; background: #0068ff; color: #ffffff; border-radius: 16px; text-decoration: none; box-shadow: 0 10px 30px rgba(0,104,255,.4)">
+<span style="width: 34px; height: 34px; border-radius: 10px; background: #ffffff; color: #0068ff; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 900">Zalo</span>
+<span style="display: flex; flex-direction: column"><span style="font-size: 13px; opacity: .9">Zalo</span><strong style="font-size: 19px; white-space: nowrap">0949 381 391</strong></span>
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background: #03081a; color: #b8c2df; padding: 34px max(5vw, 16px)">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px; font-size: 14.5px; line-height: 1.7">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<strong style="color: #ffffff; font-size: 16px">Viện Chuyển đổi số và Học liệu – Đại học Huế</strong>
+<span>20 Lê Lợi, P. Thuận Hóa, TP. Huế</span>
+<span>ĐT: 0234 3829984 · Email: cdshl@hueuni.edu.vn</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; align-items: flex-start">
+<a href="https://idter.hueuni.edu.vn" style="color: #ffffff; font-weight: 700">idter.hueuni.edu.vn</a>
+<span>Logo ChatGPT, Gemini, Claude, Copilot, NotebookLM, Canva thuộc quyền sở hữu của các hãng; dùng để nhận diện công cụ.</span>
+</div>
+</div>
+</footer>
+
+</div>
+
+<script>
+(function(){var T={"o1": "Tôi tên là [HỌ VÀ TÊN], hiện đang công tác tại [TÊN CƠ QUAN/ĐƠN VỊ], giữ vị trí [CHỨC VỤ/VỊ TRÍ CÔNG TÁC].\nLĩnh vực công tác chính của tôi là [LĨNH VỰC CHUYÊN MÔN].\nCác nhiệm vụ thường xuyên của tôi bao gồm:\n- Soạn thảo văn bản, báo cáo và tài liệu chuyên môn.\n- Tổng hợp, phân tích thông tin và dữ liệu.\n- Lập kế hoạch, tổ chức và triển khai công việc.\n- Tra cứu, nghiên cứu và cập nhật kiến thức.\n- Ứng dụng công nghệ số và trí tuệ nhân tạo (AI) để nâng cao hiệu quả công việc.\nTôi mong muốn sử dụng ChatGPT như một trợ lý AI cá nhân để hỗ trợ công việc chuyên môn, quản lý, nghiên cứu, học tập và xử lý các nhiệm vụ hằng ngày.\nTôi sử dụng tiếng Việt là ngôn ngữ giao tiếp chính.", "o2": "Hãy phản hồi với tôi theo các nguyên tắc sau:\n1. Sử dụng tiếng Việt chuẩn, rõ ràng, chuyên nghiệp và dễ hiểu.\n2. Trình bày có cấu trúc, phân chia tiêu đề, đề mục và gạch đầu dòng hợp lý.\n3. Trả lời trực tiếp vào vấn đề, đầy đủ nhưng tránh dài dòng.\n4. Ưu tiên tính thực tiễn, đưa ra ví dụ và hướng dẫn từng bước khi cần thiết.\n5. Đối với văn bản hành chính, sử dụng văn phong chuẩn mực, trang trọng và phù hợp quy định hiện hành.\n6. Đối với nghiên cứu khoa học, phân tích có lập luận, phương pháp và dẫn nguồn khi có thể kiểm chứng.\n7. Đối với các vấn đề công nghệ và AI, ưu tiên hướng dẫn cụ thể, có quy trình và ví dụ thực hành.\n8. Không tự suy diễn hoặc tạo ra số liệu, văn bản pháp luật, tài liệu tham khảo và nguồn trích dẫn không có thật.\n9. Nếu thông tin chưa rõ hoặc chưa đủ, hãy hỏi lại trước khi kết luận.\n10. Nếu vấn đề liên quan đến thông tin mới, quy định hiện hành hoặc công nghệ thay đổi nhanh, hãy kiểm tra nguồn đáng tin cậy và nêu rõ thời điểm tham chiếu.\nHãy đóng vai trò là một trợ lý AI chuyên nghiệp, chủ động, có tư duy phân tích và luôn hướng đến giải pháp thực tế.", "o3": "Hãy ghi nhớ những thông tin hữu ích sau đây để hỗ trợ tôi trong các cuộc trò chuyện tiếp theo:\n- Tôi làm việc trong lĩnh vực [lĩnh vực công tác].\n- Công việc thường xuyên của tôi là [nhiệm vụ].\n- Tôi ưu tiên sử dụng tiếng Việt.\n- Tôi thích câu trả lời có cấu trúc, rõ ràng và có ví dụ thực tế.\n- Khi hướng dẫn sử dụng công nghệ, hãy trình bày từng bước cụ thể.\nChỉ ghi nhớ những thông tin phù hợp và có giá trị sử dụng lâu dài.", "t0": "Tôi muốn bạn giới thiệu cách bạn sẽ hỗ trợ tôi trong công việc. Hãy căn cứ vào thông tin cá nhân, vai trò công tác, lĩnh vực chuyên môn và phong cách phản hồi mà tôi đã thiết lập. Hãy trình bày thành 5 nhóm nhiệm vụ hỗ trợ chính.", "t1": "Hãy giới thiệu những thông tin bạn biết về tôi, công việc và lĩnh vực chuyên môn của tôi.", "t2": "Hãy xây dựng cho tôi kế hoạch làm việc trong một tuần, trình bày dưới dạng bảng, có nhiệm vụ, thời gian và kết quả cần đạt.", "t3": "Hãy đề xuất 5 cách ứng dụng AI vào công việc chuyên môn của tôi. Với mỗi cách, hãy nêu công cụ, quy trình thực hiện và hiệu quả dự kiến."},L={"o1": "Sao chép", "o2": "Sao chép", "o3": "Sao chép", "t0": "Sao chép câu lệnh", "t1": "Sao chép câu lệnh", "t2": "Sao chép câu lệnh", "t3": "Sao chép câu lệnh"};
+document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){var id=b.dataset.copy,t=T[id];
+function ok(){b.textContent='Đã sao chép ✓';setTimeout(function(){b.textContent=L[id]},1800)}
+if(navigator.clipboard){navigator.clipboard.writeText(t).then(ok,function(){fb(t);ok()})}else{fb(t);ok()}})});
+function fb(t){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove()}
+var cs=document.querySelectorAll('.chk'),K='bdhvs-chk';var st={};try{st=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+function upd(){var n=0;cs.forEach(function(c,i){if(c.checked)n++;st[i]=c.checked});document.getElementById('dc').textContent=n;document.getElementById('bar').style.width=(n*20)+'%';try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}}
+cs.forEach(function(c,i){c.checked=!!st[i];c.addEventListener('change',upd)});upd();})();
+</script>
+</body>
+</html>
