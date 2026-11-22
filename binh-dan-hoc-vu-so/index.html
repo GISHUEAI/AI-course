@@ -30,7 +30,16 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #ffc5
 @media (prefers-reduced-motion:reduce){.float,.float2{animation:none}.lift{transition:none}}
 </style>
 
-<style>html{scroll-behavior:smooth;scroll-padding-top:16px}</style>
+<style>html{scroll-behavior:smooth;scroll-padding-top:16px}.dd{position:relative}
+.dd>summary{list-style:none;cursor:pointer;color:#10142a;padding:10px 12px;border-radius:10px;display:flex;align-items:center;gap:6px}
+.dd>summary::-webkit-details-marker{display:none}
+.dd>summary:hover,.dd[open]>summary{background:#f1f3f9}
+.dd .menu{position:absolute;right:0;top:calc(100% + 6px);z-index:50;background:#fff;border:1px solid #e8ecf6;border-radius:14px;box-shadow:0 18px 40px rgba(16,20,42,.16);padding:8px;min-width:250px;display:flex;flex-direction:column;gap:2px}
+.dd .menu a{display:flex;align-items:center;gap:10px;padding:12px;border-radius:10px;color:#10142a;text-decoration:none;font-weight:600}
+.dd .menu a:hover{background:#f5f7fc}
+.dd .menu i{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-style:normal;font-size:12px;font-weight:900;flex:none}
+@media(max-width:600px){.dd .menu{left:0;right:auto}}
+</style>
 </head>
 <body>
 
@@ -45,7 +54,13 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #ffc5
 <a href="#chuan-bi" style="color: #10142a; text-decoration: none; padding: 10px 12px; border-radius: 10px">Chuẩn bị</a>
 <a href="#ca-nhan-hoa" style="color: #10142a; text-decoration: none; padding: 10px 12px; border-radius: 10px">Cá nhân hóa</a>
 <a href="#nang-cap" style="color: #10142a; text-decoration: none; padding: 10px 12px; border-radius: 10px">Nâng cấp gói</a>
-<a href="#tai-lieu" style="color: #10142a; text-decoration: none; padding: 10px 12px; border-radius: 10px">Tải tài liệu</a>
+<details class="dd">
+<summary>Tài liệu <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+<div class="menu">
+<a href="#cam-nang-tien-ai"><i style="background:#d7101f">1</i>Cẩm nang tiền AI</a>
+<a href="#tai-lieu-tap-huan-ai"><i style="background:#386eff">2</i>Tài liệu Tập huấn AI</a>
+</div>
+</details>
 <a href="#tac-gia" style="color: #ffffff; background: #d7101f; text-decoration: none; padding: 10px 16px; border-radius: 10px">Liên hệ</a>
 </nav>
 </div>
@@ -373,17 +388,29 @@ chatgpt.com</span>
 </div>
 </section>
 
-<!-- TẢI TÀI LIỆU -->
+<!-- TÀI LIỆU (danh mục cha) -->
 <section id="tai-lieu" style="padding: 0 max(5vw, 16px) clamp(44px, 5vw, 84px); background: #ffffff">
-<div style="max-width: 1200px; margin: 0 auto; border-radius: 28px; overflow: hidden; background: linear-gradient(120deg, #d7101f 0%, #a30c18 100%); color: #ffffff; display: flex; flex-wrap: wrap; align-items: center">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 8px; max-width: 720px">
+<h2 style="margin: 0; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; font-weight: 900">Tài liệu</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4a5168">Hai nhóm tài liệu cho học viên: đọc trước khi vào lớp và dùng trong buổi tập huấn.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<a href="#cam-nang-tien-ai" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; background: #fdecee; color: #a30c18; font-weight: 700; text-decoration: none">1 · Cẩm nang tiền AI</a>
+<a href="#tai-lieu-tap-huan-ai" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; background: #eaf0ff; color: #1d3fa8; font-weight: 700; text-decoration: none">2 · Tài liệu Tập huấn AI</a>
+</div>
+</div>
+<div id="cam-nang-tien-ai" style="border-radius: 28px; overflow: hidden; background: linear-gradient(120deg, #d7101f 0%, #a30c18 100%); color: #ffffff; display: flex; flex-wrap: wrap; align-items: center">
 <div style="flex: 1 1 300px; padding: clamp(24px, 4vw, 44px); display: flex; justify-content: center; align-self: stretch; background: rgba(0,0,0,.12)">
 <a href="assets/Cam_nang_ca_nhan_hoa_ChatGPT.pdf" class="lift" style="display: block; width: min(300px, 100%); border-radius: 10px; overflow: hidden; box-shadow: 0 24px 50px rgba(0,0,0,.4); transform: rotate(-3deg)">
 <img src="assets/cover.jpg" alt="Trang bìa cẩm nang Quy trình cá nhân hóa tài khoản ChatGPT" style="width: 100%; height: auto">
 </a>
 </div>
 <div style="flex: 1.4 1 420px; padding: clamp(28px, 4vw, 52px); display: flex; flex-direction: column; gap: 16px">
-<span style="align-self: flex-start; background: #ffc53d; color: #10142a; border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 800">Tài liệu cho học viên</span>
-<h2 style="margin: 0; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.1; font-weight: 900">Tải cẩm nang: Quy trình cá nhân hóa tài khoản ChatGPT</h2>
+<span style="align-self: flex-start; background: #ffc53d; color: #10142a; border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 800">Mục 1 · Cẩm nang tiền AI</span>
+<h3 style="margin: 0; font-size: clamp(26px, 3vw, 38px); line-height: 1.1; font-weight: 900">Quy trình cá nhân hóa tài khoản ChatGPT</h3>
+<p style="margin: 0; font-size: 16px; color: #ffe3e5; font-weight: 600">Học viên đọc và thực hiện trước khi đến lớp.</p>
 <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #ffe3e5">10 trang, có hình minh họa: 6 bước thực hiện, mẫu Custom Instructions, hướng dẫn Memory, phong cách phản hồi, bài tập kiểm tra và phiếu tự đánh giá.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 4px">
 <a href="assets/Cam_nang_ca_nhan_hoa_ChatGPT.pdf" style="display: inline-flex; align-items: center; gap: 12px; min-height: 58px; padding: 0 22px; background: #ffffff; color: #d7101f; border-radius: 14px; font-weight: 800; font-size: 17px; text-decoration: none; box-shadow: 0 10px 26px rgba(0,0,0,.25)">
@@ -394,6 +421,31 @@ Tải bản PDF</a>
 Tải bản Word</a>
 </div>
 <span style="font-size: 14px; color: #ffd0d4">PDF để đọc và in; bản Word để học viên chỉnh sửa mẫu theo công việc của mình.</span>
+</div>
+</div>
+
+<div id="tai-lieu-tap-huan-ai" style="border-radius: 28px; overflow: hidden; background: linear-gradient(120deg, #10142a 0%, #1d3fa8 100%); color: #ffffff; display: flex; flex-wrap: wrap; align-items: center">
+<div style="flex: 1 1 300px; padding: clamp(24px, 4vw, 44px); display: flex; justify-content: center; align-items: center; align-self: stretch; background: rgba(255,255,255,.06)">
+<div style="width: min(240px, 100%); aspect-ratio: 3 / 4; border-radius: 14px; background: #ffffff; color: #10142a; box-shadow: 0 24px 50px rgba(0,0,0,.4); transform: rotate(3deg); padding: 22px; display: flex; flex-direction: column; justify-content: space-between">
+<img src="assets/logo.jpg" alt="" style="width: 100%; height: auto">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<strong style="font-size: 20px; line-height: 1.2; color: #1d3fa8">TÀI LIỆU TẬP HUẤN AI</strong>
+<span style="font-size: 13px; color: #4a5168">Bình dân học vụ số</span>
+</div>
+<span style="height: 8px; border-radius: 99px; background: linear-gradient(90deg, #d7101f, #ffc53d, #386eff)"></span>
+</div>
+</div>
+<div style="flex: 1.4 1 420px; padding: clamp(28px, 4vw, 52px); display: flex; flex-direction: column; gap: 16px">
+<span style="align-self: flex-start; background: #ffc53d; color: #10142a; border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 800">Mục 2 · Tài liệu Tập huấn AI</span>
+<h3 style="margin: 0; font-size: clamp(26px, 3vw, 38px); line-height: 1.1; font-weight: 900">Bài giảng và tài liệu dùng trong buổi tập huấn</h3>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #d6def5">Slide bài giảng, bài tập thực hành và tài liệu tham khảo của khóa tập huấn ứng dụng AI.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 4px">
+<span aria-disabled="true" style="display: inline-flex; align-items: center; gap: 12px; min-height: 58px; padding: 0 22px; background: rgba(255,255,255,.14); border: 1px dashed rgba(255,255,255,.5); color: #ffffff; border-radius: 14px; font-weight: 800; font-size: 17px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v6l4 2 M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg>
+Đang cập nhật</span>
+</div>
+<span style="font-size: 14px; color: #b9c6ea">Đường link tải sẽ được cập nhật tại đây.</span>
+</div>
 </div>
 </div>
 </section>
@@ -807,5 +859,6 @@ var cs=document.querySelectorAll('.chk'),K='bdhvs-chk';var st={};try{st=JSON.par
 function upd(){var n=0;cs.forEach(function(c,i){if(c.checked)n++;st[i]=c.checked});document.getElementById('dc').textContent=n;document.getElementById('bar').style.width=(n*20)+'%';try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}}
 cs.forEach(function(c,i){c.checked=!!st[i];c.addEventListener('change',upd)});upd();})();
 </script>
+<script>document.querySelectorAll(".dd .menu a").forEach(function(a){a.addEventListener("click",function(){a.closest("details").open=false})});document.addEventListener("click",function(e){document.querySelectorAll(".dd[open]").forEach(function(d){if(!d.contains(e.target))d.open=false})});</script>
 </body>
 </html>
